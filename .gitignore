@@ -1,6 +1,7 @@
 # Ignore compiled files (e.g., .pdf, .aux, .log, .bbl, .blg)
 *.aux
 *.log
+*.bcf
 *.ps
 *.dvi
 *.toc
