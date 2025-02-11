@@ -1,0 +1,11 @@
+\section*{文献综述}
+
+近年来，文本转语音 (TTS) 合成技术取得了显著进展，产生了能够从各种输入（包括短音频提示）生成逼真语音的模型 \cite{shen2018naturalttssynthesisconditioning,ren2022fastspeech2fasthighquality,kim2020glowttsgenerativeflowtexttospeech,kim2021conditionalvariationalautoencoderadversarial} 。这种进步，主要由神经网络架构驱动，对各种应用具有重要意义，从虚拟助手和聊天机器人到音频剧和互动内容创作 \cite{hu2022neuraldubberdubbingvideos,liu2024m3tts} 。然而，当前系统在推广到不同语言时，尤其是在资源匮乏的环境（如孟加拉语和中文）以及传达细致情感时，仍然面临挑战 \cite{chen2024f5ttsfairytalerfakesfluent, eskimez2024e2ttsembarrassinglyeasy}。\newline
+
+自回归 (AR) 模型在 TTS 中是常用方法，已实现令人印象深刻的零样本性能。例如，NaturalSpeech 3 \cite{ju2024naturalspeech3zeroshotspeech} 和 VALL-E 2 \cite{chen2024valle2neuralcodec} 展示了合成各种语音风格的能力。然而，AR 模型通常会面临推理延迟、曝光偏差问题以及需要仔细设计的分词器设计 \cite{song2024ellavstableneuralcodec, du2024valltdecoderonlygenerativetransducer, han2024vallerrobustefficient, peng2024voicecraftzeroshotspeechediting}。这正是非自回归 (NAR) 方法发挥作用的地方，通过并行处理提供了一种有吸引力的替代方案。\newline
+
+扩散模型 \cite{ho2020denoisingdiffusionprobabilisticmodels}，特别是那些利用最优传输流匹配 (FM-OT) \cite{kornilov2024optimalflowmatchinglearning} 的模型，在 NAR TTS 系统中已被证明非常有效。这些模型，例如最近的 Voicebox \cite{le2023voiceboxtextguidedmultilingualuniversal} 和 Matcha-TTS \cite{mehta2024matchattsfastttsarchitecture}，直接对音频特征的连续空间进行建模，通常无需显式预测音素或持续时间。然而，准确地将输入文本与输出合成语音对齐仍然是 NAR 模型中的一个重大挑战，尤其是在处理这些方法固有的显著长度差异时 \cite{ju2024naturalspeech3zeroshotspeech}。虽然一些模型使用了帧级音素对齐，但最近的研究表明，这种方法对自然度可能不够有效。跳过显式音素级持续时间建模的方法，例如 E2 TTS \cite{eskimez2024e2ttsembarrassinglyeasy} 和 Seed-TTS \cite{anastassiou2024seedttsfamilyhighqualityversatile},通常表现出更自然的韵律。这些模型通常依赖于模型在推理过程中隐式地从整体序列长度推断持续时间。\newline
+
+文献中尤其强调了文本语音对齐的鲁棒性需求，特别是对于多语言 TTS \cite{saeki2024extendingmultilingualspeechsynthesis}。在资源匮乏的语言（如孟加拉语和中文）中普遍存在的数据稀缺问题，需要创新的模型训练方法。数据增强和改进技术在这类情况下有所帮助。DiTTo-TTS \cite{lee2024dittottsefficientscalablezeroshot} 等模型试图通过预训练语言模型整合语义信息。然而，处理对齐和高效合成需求（尤其是在多语言环境中）的最有效方法仍然是研究的重点。本文提出的研究 F5-TTS \cite{chen2024f5ttsfairytalerfakesfluent} 旨在通过一种更简单的方法来构建在现有工作之上，避免显式基于音素的持续时间模型，同时在性能上达到相当甚至可能更好的水平，特别是对于鲁棒性。
+
+总之，TTS 领域正快速发展，正朝着更高效和更灵活的 NAR 模型转变。然而，强大的文本语音对齐以及解决资源匮乏语言的挑战仍然是需要进一步探索的关键领域。本研究旨在通过开发一个强大的多语言 TTS 框架（针对英语、孟加拉语和中文），在合成质量和效率之间取得平衡，特别是考虑到工业级应用需求，来为该领域做出贡献。

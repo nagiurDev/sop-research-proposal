@@ -1,0 +1,54 @@
+# Ignore compiled files (e.g., .pdf, .aux, .log, .bbl, .blg)
+*.aux
+*.log
+*.pdf
+*.ps
+*.dvi
+*.toc
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.glo
+*.bbl
+*.blg
+*.brf
+*.out
+*.snm
+*.fdb_latexmk
+*.run.xml
+*.synctex.gz
+*.gz
+*.pdfsync
+
+# Ignore intermediate files created by LaTeX
+*.aux
+*.log
+*.synctex.gz
+*.ilg
+*.ind
+*.out
+
+# Ignore build directories
+build/
+*.dep
+*.fls
+*.nav
+*.snm
+*.texinfo
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+*.pyc
+*~
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore compiled data (e.g., cache)
+.DS_Store
+*.DS_Store

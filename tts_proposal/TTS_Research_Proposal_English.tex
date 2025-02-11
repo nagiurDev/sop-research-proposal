@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,top=2.0cm,bottom=1.75cm,left=1.75cm,right=1.75cm,marginparwidth=2.00cm]{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{CJKutf8}   
+\usepackage{hyperref} 
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{arydshln}
+\usepackage{siunitx} 
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}} 
+
+
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\textit{Industry-Ready Multilingual TTS Framework} }
+\fancyhead[R]{\textit{Masters Research Proposal}}
+\fancyfoot[C]{\thepage}
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+    \vspace*{2cm}
+
+    \textit{ Research Proposal \\on}
+
+    \HRule \\[0.3cm]
+    { \large \bfseries Industry-Ready Multilingual TTS Framework: Emotion-Aware Voice Synthesis for English, Bengali, and Chinese}\\[0.1cm] 
+    \HRule \\[0.3cm]
+
+
+    \large{ \bfseries Master's admission candidate}
+    \vspace*{7cm}
+    
+
+    \begin{CJK*}{UTF8}{gbsn}
+        \large{ \bfseries RAHAMAN NAGIUR(纳吉)}
+    \end{CJK*}
+
+    \normalfont{ nagiur@outlook.com \\ +86 184 1906 0056 }
+    
+\end{center}
+\end{titlepage}
+
+
+\newpage
+
+
+
+\input{sections/introduction.tex}
+\input{sections/problem.tex}
+\input{sections/objectives.tex}
+\input{sections/questions.tex}
+\input{sections/literature.tex}
+\input{sections/methodology.tex}
+\input{sections/timeline.tex}   
+\input{sections/outcomes.tex}
+
+
+
+% References
+\printbibliography
+\end{document}
