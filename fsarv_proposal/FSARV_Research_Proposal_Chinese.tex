@@ -12,6 +12,7 @@
 \usepackage{booktabs}
 \usepackage{arydshln}
 \usepackage{siunitx} 
+\usepackage{setspace}
 
 \usepackage[backend=biber]{biblatex}
 \addbibresource{references.bib}
@@ -22,30 +23,32 @@
 
 \pagestyle{fancy}
 \fancyhf{} 
-\fancyhead[L]{\textit{Industry-Ready Multilingual TTS Framework} }
+\fancyhead[L]{\textit{Left} }
 \fancyhead[R]{\textit{Masters Research Proposal}}
 \fancyfoot[C]{\thepage}
 
 
 \begin{document}
+\begin{CJK*}{UTF8}{gbsn}
 
 \begin{titlepage}
 \begin{center}
     \vspace*{2cm}
 
-    \textit{ Research Proposal \\on}
+    % \textit{ Research Proposal \\on}
+    研究提案
 
     \HRule \\[0.3cm]
-    { \large \bfseries Industry-Ready Multilingual TTS Framework: Emotion-Aware Voice Synthesis for English, Bengali, and Chinese}\\[0.1cm] 
+    { \large \bfseries Title}\\[0.1cm] 
     \HRule \\[0.3cm]
 
 
-    \large{ \bfseries Master's admission candidate}
+    \large{ \bfseries \begin{CJK*}{UTF8}{gbsn}硕士研究生申请人\end{CJK*}}
     \vspace*{7cm}
     
 
     \begin{CJK*}{UTF8}{gbsn}
-        \large{ \bfseries RAHAMAN NAGIUR(纳吉)}
+        \Huge{ \bfseries RAHAMAN NAGIUR(纳吉)}
     \end{CJK*}
 
     \normalfont{ nagiur@outlook.com \\ +86 184 1906 0056 }
@@ -56,24 +59,21 @@
 
 \newpage
 
+\onehalfspacing
 
+\input{sections_zh/introduction.tex}
+\input{sections_zh/problem.tex}
+\input{sections_zh/objectives.tex}
+\input{sections_zh/questions.tex}
+\input{sections_zh/literature.tex}
+\input{sections_zh/methodology.tex}
 
-\input{sections/introduction.tex}
-\input{sections/problem.tex}
-\input{sections/objectives.tex}
-\input{sections/questions.tex}
-\input{sections/literature.tex}
-\input{sections/methodology.tex}
-\input{sections/timeline.tex}   
-\input{sections/outcomes.tex}
+\input{sections_zh/outcomes.tex}
+\input{sections_zh/timeline.tex}   
 
 
 
 % References
 \printbibliography
+\end{CJK*}
 \end{document}
-
-% How to compile References with `biber`
-% 1. pdflatex file_name
-% 2. biber file_name
-% 3. pdflatex file_name
